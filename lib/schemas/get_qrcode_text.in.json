@@ -1,0 +1,15 @@
+{
+    "type": "object",
+    "properties": {
+        "text": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "format": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

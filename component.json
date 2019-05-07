@@ -1,0 +1,192 @@
+{
+    "title": "Fun Generators",
+    "description": "Fungenerators API gives access to the full set of generators available at fungenerators.com so that you can integrate them in your workflow or an app. [Click here to get details and subscribe](http://fungenerators.com/api) . Here are the individual API links:\n\n  ## QR Code API ##\n  Generate QR Code images for text, url, email , business cards etc. You can decode QR Code images and get the contents as well. The best and complete QR Code API on the cloud. [Click here to subscribe](http://fungenerators.com/api/qrcode)\n",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/fungenerators.com/qrcode/1.5/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://api.fungenerators.com/",
+                    "http://api.fungenerators.com/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            },
+            "X-Fungenerators-Api-Secret": {
+                "label": "X-Fungenerators-Api-Secret (X-Fungenerators-Api-Secret)",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_qrcode_business_card": {
+            "main": "./lib/actions/get_qrcode_business_card.js",
+            "title": "Get a QR Code image for a business card aka VCARD",
+            "description": "Get a QR Code image for a business card aka VCARD",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_business_card.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_qrcode_decode": {
+            "main": "./lib/actions/post_qrcode_decode.js",
+            "title": "Decode a QR Code image and return the cotents if successful",
+            "description": "Decode a QR Code image and return the cotents if successful",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_qrcode_decode.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_email": {
+            "main": "./lib/actions/get_qrcode_email.js",
+            "title": "Get a QR Code image for an email",
+            "description": "Get a QR Code image for an email",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_email.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_phone": {
+            "main": "./lib/actions/get_qrcode_phone.js",
+            "title": "Get a QR Code image for a phone number",
+            "description": "Get a QR Code image for a phone number",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_phone.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_raw": {
+            "main": "./lib/actions/get_qrcode_raw.js",
+            "title": "Get a QR Code image for a block of raw data",
+            "description": "Get a QR Code image for a block of raw data",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_raw.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_skype": {
+            "main": "./lib/actions/get_qrcode_skype.js",
+            "title": "Get a QR Code image for a skype user",
+            "description": "Get a QR Code image for a skype user",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_skype.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_sms": {
+            "main": "./lib/actions/get_qrcode_sms.js",
+            "title": "Get a QR Code image for a Phone number for SMS messaging",
+            "description": "Get a QR Code image for a Phone number for SMS messaging",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_sms.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_text": {
+            "main": "./lib/actions/get_qrcode_text.js",
+            "title": "Get a QR Code image for a block of text",
+            "description": "Get a QR Code image for a block of text",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_text.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_qrcode_url": {
+            "main": "./lib/actions/get_qrcode_url.js",
+            "title": "Get a QR Code image for a url",
+            "description": "Get a QR Code image for a url",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_qrcode_url.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

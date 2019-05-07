@@ -1,0 +1,80 @@
+{
+    "type": "object",
+    "properties": {
+        "firstname": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "lastname": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "middlename": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "email": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "company": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "phone_work": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "phone_home": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "phone_cell": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "street1": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "street2": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "city": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "zip": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "state": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "country": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        },
+        "format": {
+            "required": false,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}
